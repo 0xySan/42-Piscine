@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <ethtaquet@gmail.com>              +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 12:55:33 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/07 12:57:04 by etaquet          ###   ########.fr       */
+/*   Created: 2024/08/07 15:18:59 by etaquet           #+#    #+#             */
+/*   Updated: 2024/08/07 15:19:01 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <unistd.h>
 
-void	ft_putchar(char c
-){
+void	ft_putchar(char c)
+{
 	write(1, &c, 1);
 }
 

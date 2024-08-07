@@ -3,17 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <ethtaquet@gmail.com>              +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 12:55:33 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/07 12:57:04 by etaquet          ###   ########.fr       */
+/*   Created: 2024/08/07 15:30:35 by etaquet           #+#    #+#             */
+/*   Updated: 2024/08/07 15:30:38 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_alphabet(void
-){
-    char letter;
+void	ft_print_alphabet(void)
+{
+	char	letter;
 
+	letter = 'a';
+	while (letter <= 'z')
+	{
+		write(1, &letter, 1);
+		letter++;
+	}
 }
