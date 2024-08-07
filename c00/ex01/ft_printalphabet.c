@@ -12,9 +12,8 @@
 
 #include <unistd.h>
 
-void ft_print_alphabet(void)
-{
-
-    char alphabet = 'a';
+void ft_print_alphabet(void
+){
+    char letter;
 
 }
