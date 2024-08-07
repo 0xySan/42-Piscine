@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 15:18:35 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/07 15:27:08 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/07 21:13:10 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,4 @@ void	ft_print_alphabet(void)
 		write(1, &letter, 1);
 		letter--;
 	}
-}
-
-void	main(void)
-{
-	ft_print_alphabet();
 }

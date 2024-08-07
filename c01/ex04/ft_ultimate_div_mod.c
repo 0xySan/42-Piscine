@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 15:35:28 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/07 21:16:02 by oxy              ###   ########.fr       */
+/*   Created: 2024/08/07 21:41:13 by oxy               #+#    #+#             */
+/*   Updated: 2024/08/07 21:45:05 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void    ft_ultimate_div_mod(int *a, int *b)
 {
-	char	number;
+    int temporary;
 
-	number = '0';
-	while (number <= '9')
-	{
-		write(1, &number, 1);
-		number++;
-	}
+    temporary = *a / *b;
+    *b = *a % *b;
+    *a = temporary;
 }

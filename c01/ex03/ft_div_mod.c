@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 15:35:28 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/07 21:16:02 by oxy              ###   ########.fr       */
+/*   Created: 2024/08/07 21:38:45 by oxy               #+#    #+#             */
+/*   Updated: 2024/08/07 21:40:15 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void    ft_div_mod(int a, int b, int *div, int *mod)
 {
-	char	number;
-
-	number = '0';
-	while (number <= '9')
-	{
-		write(1, &number, 1);
-		number++;
-	}
+    *div = a / b;
+    *mod = a % b;
 }

@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 15:35:28 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/07 21:16:02 by oxy              ###   ########.fr       */
+/*   Created: 2024/08/07 22:01:17 by oxy               #+#    #+#             */
+/*   Updated: 2024/08/07 22:14:29 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void ft_rev_int_tab(int *tab, int size)
 {
-	char	number;
+    int start;
+    int temp;
 
-	number = '0';
-	while (number <= '9')
-	{
-		write(1, &number, 1);
-		number++;
-	}
+    start = 0;
+    size--;
+    while (start <= size)
+    {
+        temp = tab[size];
+        tab[size] = tab[start];
+        tab[start] = temp;
+        start++;
+        size--;
+    }
 }

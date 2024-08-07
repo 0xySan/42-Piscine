@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 15:35:28 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/07 21:16:02 by oxy              ###   ########.fr       */
+/*   Created: 2024/08/07 21:33:16 by oxy               #+#    #+#             */
+/*   Updated: 2024/08/07 21:37:31 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_swap(int *a, int *b)
 {
-	char	number;
-
-	number = '0';
-	while (number <= '9')
-	{
-		write(1, &number, 1);
-		number++;
-	}
+	int swappable;
+	
+	swappable = *a;
+	*a = *b;
+	*b = swappable;
 }

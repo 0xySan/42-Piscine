@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 15:35:28 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/07 21:16:02 by oxy              ###   ########.fr       */
+/*   Created: 2024/08/07 21:54:58 by oxy               #+#    #+#             */
+/*   Updated: 2024/08/07 22:14:27 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+int ft_strlen(char *str)
 {
-	char	number;
+    int val;
 
-	number = '0';
-	while (number <= '9')
-	{
-		write(1, &number, 1);
-		number++;
-	}
+    val = 0;
+    while(!str && !str[val])
+    {
+        val++;
+    }
+    return (val);
 }
