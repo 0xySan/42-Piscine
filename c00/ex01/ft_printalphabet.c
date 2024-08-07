@@ -1,13 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: etaquet <ethtaquet@gmail.com>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/07 12:55:33 by etaquet           #+#    #+#             */
+/*   Updated: 2024/08/07 12:57:04 by etaquet          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_printalphabet(void){
-	const char *alphabet = "abcdefghijklmnopqrstuvwxyz";
-	for(int i = 0; i<26 ; i++, alphabet++){
-		write(1,alphabet,1);
-	} 
-}
+void ft_print_alphabet(void)
+{
 
-int main(){
-	ft_printalphabet();
-	return 0;
+    char alphabet = 'a';
+
 }
