@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 22:14:09 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 06:48:25 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/08 09:37:52 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_minimum(int *tab, int start, int size)
 {
-	int minimum;
-	int index;
+	int	minimum;
+	int	index;
 
 	minimum = tab[start];
 	index = start;
@@ -30,9 +30,9 @@ int	ft_minimum(int *tab, int start, int size)
 
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int temp;
-	int temp_index;
-	int start;
+	int	temp;
+	int	temp_index;
+	int	start;
 
 	start = 0;
 	while (start < size)
