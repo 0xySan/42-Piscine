@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 21:54:58 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 09:37:36 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/11 23:12:39 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strlen(char *str)
 	int	val;
 
 	val = 0;
-	while (!str && !str[val])
+	while (str && str[val])
 	{
 		val++;
 	}
