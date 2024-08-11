@@ -6,7 +6,7 @@
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 20:58:19 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 21:40:53 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/11 21:46:19 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[v] = '\0';
 	return dest;
 }
-
+/*
 int main(int c, char **v){
 	char test[1000];
 	ft_strcpy(test,v[1]);
 	printf("%s", test);
 }
+*/

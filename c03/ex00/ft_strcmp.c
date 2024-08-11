@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/11 22:39:06 by oxy              ###   ########.fr       */
+/*   Created: 2024/08/11 22:24:17 by oxy               #+#    #+#             */
+/*   Updated: 2024/08/11 22:27:04 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_strcmp(char *s1, char *s2)
 {
-	if(!dest || !src){
-		return dest;
+	if(!s1 || !s2){
+		return 0;
 	}
-	unsigned int v;
-
-	v = 0;
-	while(v < n && src[v])
-	{
-		dest[v] = src[v];
-		v++;
+    int start;
+    start = -1;
+	while(s1[++start]){
+		if(s1[start] != s2[start])
+		{
+			return s1[start]-s2[start];
+		}
 	}
-	dest[v] = '\0';
-	return dest;
+	return s1[start]-s2[start];
 }
-/*
+#include <stdio.h>
 int main(){
-	char test[] = "Hello";
-	char test2[] = "World!";
-	ft_strncpy(test,test2,1000);
-	printf("%s", test);
-}*/
+	int t;
+	char test[2];
+	test[0] = 'A';
+	test[1] = 'B';
+	t = ft_strcmp("A",test);
+	printf("%d", t);
+}

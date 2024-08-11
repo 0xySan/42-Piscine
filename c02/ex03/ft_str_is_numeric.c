@@ -6,7 +6,7 @@
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 21:52:10 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 21:55:53 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/11 16:18:18 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ int ft_str_is_numeric(char *str)
     }
     return 1;
 }
-#include <stdio.h>
+
+/*#include <stdio.h>
 int main(){
     int test;
 
     test = ft_str_is_numeric("261511a0066");
     printf("%d", test);
-}
+}*/
