@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/08 04:18:18 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 09:38:34 by etaquet          ###   ########.fr       */
+/*   Created: 2024/08/08 21:58:10 by oxy               #+#    #+#             */
+/*   Updated: 2024/08/08 22:00:19 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+int ft_str_is_lowercase(char *str)
 {
-	if (s1 == s2)
-	{
-		return (0);
-	}
-	else
-	{
-		return (s2 - s1);
-	}
+    if(!str){
+        return 1;
+    }
+    str--;
+    while(++str && *str){
+        if(*str<'a' || *str >'z'){
+            return 0;
+        }
+    }
+    return 1;
 }
