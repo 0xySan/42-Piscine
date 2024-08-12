@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 22:27:53 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/12 11:28:12 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/12 11:42:15 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 /*#include <stdio.h>
-int main(int c, char **v){
+int main(int n, char **v){
+	n = 1;
 	char test[1000] = "Hello World";
 	ft_strcat(test,v[1]);
 	printf("%s", test);

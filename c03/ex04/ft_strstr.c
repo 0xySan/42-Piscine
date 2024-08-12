@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 22:45:08 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/12 11:32:37 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/12 11:44:33 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strlen(char *str)
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	start;
+	unsigned int	start;
 
 	if (!s1 || !s2)
 	{
@@ -62,5 +62,5 @@ char	*ft_strstr(char *str, char *to_find)
 }
 /*#include <stdio.h>
 int main(){
-	printf("%s", ft_strstr("",""));
+	printf("%s", ft_strstr("esegethansegessg","ethan"));
 }*/

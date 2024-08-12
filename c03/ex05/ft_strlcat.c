@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 23:06:44 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/12 11:34:08 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/12 11:45:57 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (ft_strlen(dest));
 }
 /*#include <stdio.h>
-int main(int c, char **v){
+int main(int n, char **v){
+	n = 1;
 	char test[1000] = "Hello World";
 	unsigned int test2;
 	test2 = ft_strlcat(test,v[1],100);

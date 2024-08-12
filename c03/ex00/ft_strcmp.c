@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 22:24:17 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/12 11:23:56 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/12 11:40:01 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (s1[start] - s2[start]);
 }
-/*include <stdio.h>
+/*#include <stdio.h>
 int main(){
 	int t;
 	char test[2];

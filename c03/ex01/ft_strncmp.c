@@ -6,13 +6,13 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/12 11:25:44 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/12 11:41:05 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	start;
+	unsigned int	start;
 
 	if (!s1 || !s2)
 	{
@@ -33,7 +33,7 @@ int main(){
 	int t;
 	char test[2];
 	test[0] = 'A';
-	test[1] = 0;
+	test[1] = 'B';
 	t = ft_strncmp("A",test,100000);
 	printf("%d", t);
 }*/
