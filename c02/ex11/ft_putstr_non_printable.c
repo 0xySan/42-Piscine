@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 11:54:08 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/12 11:58:12 by etaquet          ###   ########.fr       */
+/*   Created: 2024/08/12 12:00:29 by etaquet           #+#    #+#             */
+/*   Updated: 2024/08/12 12:05:27 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+void	ft_calcutate_hexa(char *str)
 {
-	int	val;
-
-	val = 0;
-	while (str[val])
-	{
-		val++;
-	}
-	return (val);
+	
 }
 
-char	*ft_strlcpy(char *dest, char *src)
+void	ft_putstr_non_printable(char *str)
 {
-	int	v;
-
-	v = 0;
-	while (src && src[v])
+	if (!str)
 	{
-		dest[v] = src[v];
-		v++;
+		return ;
 	}
-	dest[v] = '\0';
-	return (ft_strlen(dest));
+	str--;
+	while (++str && *str)
+	{
+		if (*str >= 0 && *str <= 31)
+		{
+			ft_calcutate_hexa(str);
+			str++;
+		}
+	}
 }
