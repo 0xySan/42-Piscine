@@ -1,61 +1,66 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 15:03:12 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/13 00:17:04 by oxy              ###   ########.fr       */
+/*   Created: 2024/08/13 00:02:20 by oxy               #+#    #+#             */
+/*   Updated: 2024/08/13 00:17:14 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write (1, &c, 1);
+	int	val;
+
+	val = 0;
+	while (str && str[val])
+	{
+		val++;
+	}
+	return (val);
 }
 
-int ft_count_nb(int nb)
+int ft_count_nb(int nb, int len)
 {
     int value;
 
     value = 0;
-
-    while(nb>9)
+    while(nb>=len)
     {
-        nb/=10;
+        nb/=len;
         value++;
     }
     return value;
 }
 
-void	ft_putnbr(int nb)
+void	ft_putnbr_base(int nb, char *base)
 {
     int nb_count;
     int n_tempo;
     int nb_tempo;
+    int blen;
 
-    if (nb == -2147483648)
-    {
-        write(1,"-2147483648",12);
+    blen=ft_strlen(base);
+    if( blen <= 0) 
         return ;
-    }
 	if (nb < 0)
 	{
-        ft_putchar('-');
+        write(1,"-",1);
 		nb = -nb;
 	}
-    nb_count = ft_count_nb(nb)+1;
+    nb_count = ft_count_nb(nb, blen)+1;
     while(nb_count-->0)
     {
         n_tempo = nb_count;
         nb_tempo = nb;
         while(n_tempo--)
-            nb_tempo/=10;
-        ft_putchar(nb_tempo%10+'0');
+            nb_tempo/=blen;
+        write(1,&base[nb_tempo%blen],1);
     }
 }
 
@@ -63,6 +68,6 @@ int main(int argc, const char *argv[])
 {
 	int i;
 
-	ft_putnbr(-2147483648);
+	ft_putnbr_base(-2, "01");
 	return 0;
 }

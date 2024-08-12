@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 12:00:29 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/12 12:05:27 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/12 21:24:24 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_calcutate_hexa(char *str)
+void	ft_calcutate_hexa(char *str, int index)
 {
+    char* strHex;
+    
 	
 }
 
