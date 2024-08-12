@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 23:06:44 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/12 11:45:57 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/12 14:19:49 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,14 @@ int	ft_strlen(char *str)
 	return (val);
 }
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	v;
 
+	if (!src)
+	{
+		return ;
+	}
 	v = 0;
 	while (v < n && src[v])
 	{
@@ -33,21 +37,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		v++;
 	}
 	dest[v] = '\0';
-	return (dest);
 }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	int	start;
 
-	if (!dest)
-	{
-		return (0);
-	}
-	if (!src)
-	{
-		return (ft_strlen(dest));
-	}
 	start = 0;
 	while (dest && dest[start])
 	{
@@ -62,5 +57,6 @@ int main(int n, char **v){
 	char test[1000] = "Hello World";
 	unsigned int test2;
 	test2 = ft_strlcat(test,v[1],100);
-	printf("%d", test2);
+	printf("%d\n", test2);
+	printf("%s", test);
 }*/

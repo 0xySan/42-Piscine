@@ -3,30 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/11 22:39:06 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/12 13:46:40 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	if(!dest || !src){
-		return dest;
-	}
-	unsigned int v;
+	unsigned int	v;
 
 	v = 0;
-	while(v < n && src[v])
+	while (v < n && src[v])
 	{
 		dest[v] = src[v];
 		v++;
 	}
+	while (v < n - 1)
+	{
+		dest[v] = '\0';
+		v++;
+	}
 	dest[v] = '\0';
-	return dest;
 }
 /*
 int main(){

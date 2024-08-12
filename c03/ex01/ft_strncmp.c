@@ -6,13 +6,18 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/12 11:41:05 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/12 13:23:40 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	start;
+
+	if (n <= 0)
+	{
+		return (0);
+	}
 
 	if (!s1 || !s2)
 	{
