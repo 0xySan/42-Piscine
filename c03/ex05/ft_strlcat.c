@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 23:06:44 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/11 23:11:18 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/12 11:34:08 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,43 +24,42 @@ int	ft_strlen(char *str)
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int v;
+	unsigned int	v;
 
 	v = 0;
-	while(v < n && src[v])
+	while (v < n && src[v])
 	{
 		dest[v] = src[v];
 		v++;
 	}
 	dest[v] = '\0';
-	return dest;
+	return (dest);
 }
 
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-    if(!dest)
-    {
-        return 0;
-    }
-    if(!src)
-    {
-        return ft_strlen(dest);
-    }
-    int start;
+	int	start;
 
-    start=0;
-
-    while (dest && dest[start])
-    {
-        start++;
-    }
-    ft_strncpy(&dest[start], src, size);
-    return ft_strlen(dest);
+	if (!dest)
+	{
+		return (0);
+	}
+	if (!src)
+	{
+		return (ft_strlen(dest));
+	}
+	start = 0;
+	while (dest && dest[start])
+	{
+		start++;
+	}
+	ft_strncpy(&dest[start], src, size);
+	return (ft_strlen(dest));
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int main(int c, char **v){
 	char test[1000] = "Hello World";
-    unsigned int test2;
+	unsigned int test2;
 	test2 = ft_strlcat(test,v[1],100);
 	printf("%d", test2);
-}
+}*/

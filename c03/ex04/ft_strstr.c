@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 22:45:08 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/11 23:01:22 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/12 11:32:37 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -26,38 +24,43 @@ int	ft_strlen(char *str)
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-    int start;
-    start = -1;
-	while(++start < n-1 && s1[start]){
-		if(s1[start] != s2[start])
+	int	start;
+
+	if (!s1 || !s2)
+	{
+		return (0);
+	}
+	start = -1;
+	while (++start < n - 1 && s1[start])
+	{
+		if (s1[start] != s2[start])
 		{
-			return s1[start]-s2[start];
+			return (s1[start] - s2[start]);
 		}
 	}
-	return s1[start]-s2[start];
+	return (s1[start] - s2[start]);
 }
 
-char *ft_strstr(char *str, char *to_find)
+char	*ft_strstr(char *str, char *to_find)
 {
-    if(!str || !to_find){
-		return 0;
+	int	len;
+
+	if (!str || !to_find)
+	{
+		return (0);
 	}
-
-    int len;
-
-    len = ft_strlen(to_find);
-
-    while (*str)
-    {
-        if (ft_strncmp(str, to_find, len) == 0)
-        {
-            return str;
-        }
-        str++;
-    }
-    return 0;
+	len = ft_strlen(to_find);
+	while (*str)
+	{
+		if (ft_strncmp(str, to_find, len) == 0)
+		{
+			return (str);
+		}
+		str++;
+	}
+	return (0);
 }
-
+/*#include <stdio.h>
 int main(){
-    printf("%s", ft_strstr("cacafesf0215effec?;:;:acqegecacagsgcacaesgesgesgesgcacaca","cacaca"));
-}
+	printf("%s", ft_strstr("",""));
+}*/
