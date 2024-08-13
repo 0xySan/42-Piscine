@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 00:02:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/13 14:14:52 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/13 16:19:59 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,19 @@
 int	ft_strlen(char *str)
 {
 	int	val;
+	int	temp;
 
-	val = 0;
-	while (str && str[val])
+	val = -1;
+	while (str && str[++val])
 	{
-		val++;
+		if (str[val] == '+' || str[val] == '-')
+			return (0);
+		temp = val;
+		while (str[++temp])
+		{
+			if (str[temp] == str[val])
+				return (0);
+		}
 	}
 	return (val);
 }
@@ -37,6 +45,7 @@ int	ft_count_nb(int nb, int len)
 	}
 	return (value);
 }
+
 
 void	ft_putnbr_base(int nb, char *base)
 {
@@ -64,10 +73,10 @@ void	ft_putnbr_base(int nb, char *base)
 	}
 }
 
-/*int	main(int argc, const char *argv[])
+int	main(int argc, const char *argv[])
 {
 	int	i;
 
-	ft_putnbr_base(-2, "01");
+	ft_putnbr_base(-127, "poneyvif");
 	return (0);
-}*/
+}
