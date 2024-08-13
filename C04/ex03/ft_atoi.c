@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 22:49:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/13 14:09:15 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/13 20:05:04 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 int	ft_space(char *str)
 {
 	int	start;
@@ -46,9 +47,10 @@ int	ft_atoi(char *str)
 	return (value * signe);
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 int	main(int argc, char *argv[])
 {
 	printf("%d", ft_atoi(argv[1]));
 	return 0;
-}*/
+}
+*/

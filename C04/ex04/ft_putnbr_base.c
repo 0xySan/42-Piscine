@@ -73,10 +73,10 @@ void	ft_putnbr_base(int nb, char *base)
 	}
 }
 
-int	main(int argc, const char *argv[])
-{
-	int	i;
-
-	ft_putnbr_base(-127, "poneyvif");
-	return (0);
-}
+//int	main(int argc, const char *argv[])
+//{
+//	int	i;
+//
+//	ft_putnbr_base(-127, "poneyvif");
+//	return (0);
+//}
