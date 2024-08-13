@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 00:02:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/13 16:19:59 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/13 20:10:55 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	ft_putnbr_base(int nb, char *base)
 	int	n_tempo;
 	int	nb_tempo;
 	int	blen;
+    int signe;
 
 	blen = ft_strlen(base);
 	if (blen <= 0)
@@ -60,7 +61,7 @@ void	ft_putnbr_base(int nb, char *base)
 	if (nb < 0)
 	{
 		write(1, "-", 1);
-		nb = -nb;
+		signe = -1;
 	}
 	nb_count = ft_count_nb(nb, blen) + 1;
 	while (nb_count-- > 0)
@@ -73,10 +74,10 @@ void	ft_putnbr_base(int nb, char *base)
 	}
 }
 
-//int	main(int argc, const char *argv[])
-//{
-//	int	i;
-//
-//	ft_putnbr_base(-127, "poneyvif");
-//	return (0);
-//}
+int	main(int argc, const char *argv[])
+{
+	int	i;
+
+	ft_putnbr_base(-2147483648, "01");
+	return (0);
+}

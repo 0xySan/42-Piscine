@@ -6,7 +6,7 @@
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 22:22:13 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 22:22:42 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/13 20:12:51 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char *ft_strlowcase(char *str)
     }
     return str;
 }
-#include <stdio.h>
-int main(int c, char **v){
-    printf("%s", ft_strupcase(v[1]));
-}
+//#include <stdio.h>
+//int main(int c, char **v){
+//    printf("%s", ft_strupcase(v[1]));
+//}

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/12 13:46:40 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/13 20:15:53 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-void	ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	v;
 
@@ -28,6 +28,7 @@ void	ft_strncpy(char *dest, char *src, unsigned int n)
 		v++;
 	}
 	dest[v] = '\0';
+    return dest;
 }
 /*
 int main(){

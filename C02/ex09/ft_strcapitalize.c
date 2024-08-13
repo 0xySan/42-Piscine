@@ -6,7 +6,7 @@
 /*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 16:19:35 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/11 22:21:56 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/13 20:13:10 by oxy              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char    *ft_strcapitalize(char *str)
         start++;
     }
 }
-int main(int n, char **v){
-    ft_strcapitalize(v[1]);
-    printf("%s", v[1]);
-}
+//int main(int n, char **v){
+//    ft_strcapitalize(v[1]);
+//    printf("%s", v[1]);
+//}
