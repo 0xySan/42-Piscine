@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 16:43:55 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/12 22:04:40 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/13 14:13:21 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,22 +48,22 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	{
 		start++;
 	}
-    if (start>=size)
-    {
-        return size + ft_strlen(src); 
-    }
-	ft_strncpy(&dest[start], src, size-start-1);
-	return (start+ft_strlen(src));
+	if (start >= size)
+	{
+		return (size + ft_strlen(src));
+	}
+	ft_strncpy(&dest[start], src, size - start - 1);
+	return (start + ft_strlen(src));
 }
-#include <stdio.h>
+/*#include <stdio.h>
 #include <bsd/string.h>
 int main(int n, char **v){
-    (void)n;
+	(void)n;
 	char test[1000] = "Hello World";
 	unsigned int test2;
 	test2 = strlcat(test,v[1],100);
-    printf("%s\n%d\n", test, test2);
-    char test3[1000] = "Hello World";
-    test2 = ft_strlcat(test3,v[1],100);
-    printf("%s\n%d", test3, test2);
-}
+	printf("%s\n%d\n", test, test2);
+	char test3[1000] = "Hello World";
+	test2 = ft_strlcat(test3,v[1],100);
+	printf("%s\n%d", test3, test2);
+}*/

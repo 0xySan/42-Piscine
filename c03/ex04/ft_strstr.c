@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 22:45:08 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/12 21:30:53 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/13 14:12:15 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ char	*ft_strstr(char *str, char *to_find)
 		return (0);
 	}
 	len = ft_strlen(to_find);
-    if (len == 0)
-    {
-        return str;
-    }
+	if (len == 0)
+	{
+		return (str);
+	}
 	while (str)
 	{
 		if (ft_strncmp(str, to_find, len) == 0)
@@ -64,9 +64,9 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 int main(int n, char **v){
-    char *test = "esegethansegessg";
+	char *test = "esegethansegessg";
 	printf("%s\n%s", ft_strstr(test,v[1]), test);
-}
+}*/

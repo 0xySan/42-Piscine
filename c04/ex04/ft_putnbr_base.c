@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 00:02:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/13 00:17:14 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/13 14:14:52 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,49 +25,49 @@ int	ft_strlen(char *str)
 	return (val);
 }
 
-int ft_count_nb(int nb, int len)
+int	ft_count_nb(int nb, int len)
 {
-    int value;
+	int	value;
 
-    value = 0;
-    while(nb>=len)
-    {
-        nb/=len;
-        value++;
-    }
-    return value;
+	value = 0;
+	while (nb >= len)
+	{
+		nb /= len;
+		value++;
+	}
+	return (value);
 }
 
 void	ft_putnbr_base(int nb, char *base)
 {
-    int nb_count;
-    int n_tempo;
-    int nb_tempo;
-    int blen;
+	int	nb_count;
+	int	n_tempo;
+	int	nb_tempo;
+	int	blen;
 
-    blen=ft_strlen(base);
-    if( blen <= 0) 
-        return ;
+	blen = ft_strlen(base);
+	if (blen <= 0)
+		return ;
 	if (nb < 0)
 	{
-        write(1,"-",1);
+		write(1, "-", 1);
 		nb = -nb;
 	}
-    nb_count = ft_count_nb(nb, blen)+1;
-    while(nb_count-->0)
-    {
-        n_tempo = nb_count;
-        nb_tempo = nb;
-        while(n_tempo--)
-            nb_tempo/=blen;
-        write(1,&base[nb_tempo%blen],1);
-    }
+	nb_count = ft_count_nb(nb, blen) + 1;
+	while (nb_count-- > 0)
+	{
+		n_tempo = nb_count;
+		nb_tempo = nb;
+		while (n_tempo--)
+			nb_tempo /= blen;
+		write(1, &base[nb_tempo % blen], 1);
+	}
 }
 
-int main(int argc, const char *argv[])
+/*int	main(int argc, const char *argv[])
 {
-	int i;
+	int	i;
 
 	ft_putnbr_base(-2, "01");
-	return 0;
-}
+	return (0);
+}*/
