@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 00:02:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 15:08:55 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/14 23:01:20 by oxysan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_count_nb(int nb, int len)
 	int	value;
 
 	value = 0;
-	while (nb >= len)
+	while (nb >= len || nb <= -len)
 	{
 		nb /= len;
 		value++;
@@ -54,8 +54,9 @@ void	ft_putnbr_base(int nb, char *base)
 	int	blen;
 	int	signe;
 
+	signe = 1;
 	blen = ft_strlen(base);
-	if (blen <= 0)
+	if (blen <= 1)
 		return ;
 	if (nb < 0)
 	{
@@ -72,12 +73,11 @@ void	ft_putnbr_base(int nb, char *base)
 		write(1, &base[(nb_tempo % blen) * signe], 1);
 	}
 }
-/*
-int	main(int argc, const char *argv[])
+
+/*int	main(int argc, const char *argv[])
 {
 	int	i;
 
-	ft_putnbr_base(-2147483648, "01");
+	ft_putnbr_base(-12021, "01");
 	return (0);
-}
-*/
+}*/

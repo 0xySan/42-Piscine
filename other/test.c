@@ -1,26 +1,83 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/13 00:02:20 by oxy               #+#    #+#             */
+/*   Updated: 2024/08/14 22:56:17 by oxysan           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 #include <stdio.h>
 
-int	ft_strstr_spe(char *str)
+int	ft_strlen(char *str)
 {
-	int	start;
+	int	val;
 	int	temp;
 
-	start = -1;
-	while (str && str[++start])
+	val = -1;
+	while (str && str[++val])
 	{
-		temp = start;
+		if (str[val] == '+' || str[val] == '-')
+			return (0);
+		temp = val;
 		while (str[++temp])
 		{
-			if (str[temp] == str[start])
-				return (1);
+			if (str[temp] == str[val])
+				return (0);
 		}
 	}
-	return (0);
+	return (val);
 }
 
-int	main(int argc, char **argv)
+int	ft_count_nb(int nb, int len)
 {
-	printf("%d",ft_strstr_spe(argv[1]));
+	int	value;
+
+	value = 0;
+	while (nb >= len)
+	{
+		nb /= len;
+		value++;
+	}
+	return (value);
+}
+
+
+void	ft_putnbr_base(int nb, char *base)
+{
+	int	nb_count;
+	int	n_tempo;
+	int	nb_tempo;
+	int	blen;
+    int signe;
+
+	blen = ft_strlen(base);
+	if (blen <= 0)
+		return ;
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		signe = -1;
+	}
+	nb_count = ft_count_nb(nb, blen) + 1;
+	while (nb_count-- > 0)
+	{
+		n_tempo = nb_count;
+		nb_tempo = nb;
+		while (n_tempo--)
+			nb_tempo /= blen;
+		write(1, &base[nb_tempo % blen], 1);
+	}
+}
+
+int	main(int argc, const char *argv[])
+{
+	int	i;
+
+	ft_putnbr_base(-2147483648, "01");
+	return (0);
 }
