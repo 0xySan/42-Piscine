@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/08 22:00:52 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 22:48:08 by oxysan           ###   ########.fr       */
+/*   Created: 2024/08/14 22:14:16 by oxysan            #+#    #+#             */
+/*   Updated: 2024/08/14 22:16:22 by oxysan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_printable(char *str)
+#include <unistd.h>
+
+int	ft_strlen(char *str)
 {
-		if(!str){
-		return 1;
+	int	val;
+
+	val = 0;
+	while (str[val])
+	{
+		val++;
 	}
-	str--;
-	while(++str && *str){
-		if(*str<32 || *str>126){
-			return 0;
-		}
-	}
-	return 1;
+	return (val);
+}
+
+int main(int n, char **v)
+{
+    while(--n > 0)
+    {
+        write(1,v[n],ft_strlen(v[n]));
+        write(1,"\n",1);
+    }
+    return 0;
 }
