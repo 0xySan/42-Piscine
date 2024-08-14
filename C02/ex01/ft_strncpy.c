@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 03:23:30 by oxysan           ###   ########.fr       */
+/*   Updated: 2024/08/14 15:10:41 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[v] = '\0';
 		v++;
 	}
-	if (n>=len)
+	if (n >= len)
 		dest[v] = '\0';
-    return dest;
+	return (dest);
 }
 /*
 int main(){

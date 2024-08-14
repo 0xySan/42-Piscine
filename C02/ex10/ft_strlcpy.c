@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 11:54:08 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/13 20:14:30 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/14 15:21:40 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strlen(char *str)
 	return (val);
 }
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	int	v;
 
