@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 22:45:08 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/13 14:12:15 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/14 03:18:49 by oxysan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*ft_strstr(char *str, char *to_find)
 	{
 		return (str);
 	}
-	while (str)
+	while (*str)
 	{
 		if (ft_strncmp(str, to_find, len) == 0)
 		{

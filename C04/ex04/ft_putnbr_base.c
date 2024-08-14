@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 00:02:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/13 20:10:55 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/14 03:19:15 by oxysan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,10 +70,10 @@ void	ft_putnbr_base(int nb, char *base)
 		nb_tempo = nb;
 		while (n_tempo--)
 			nb_tempo /= blen;
-		write(1, &base[nb_tempo % blen], 1);
+		write(1, &base[(nb_tempo % blen) * signe], 1);
 	}
 }
-
+/*
 int	main(int argc, const char *argv[])
 {
 	int	i;
@@ -81,3 +81,4 @@ int	main(int argc, const char *argv[])
 	ft_putnbr_base(-2147483648, "01");
 	return (0);
 }
+*/
