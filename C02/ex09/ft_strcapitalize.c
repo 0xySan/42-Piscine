@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 16:19:35 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 15:21:32 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/14 17:12:13 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,9 @@ char	*ft_strcapitalize(char *str)
 	check_is_letter(str, -1);
 	while (str && str[start])
 	{
-		if (!((str[start] >= '0' && str[start] <= '9')))
-			check_is_letter(str, start);
-		else if (str[start] >= 'a' && str[start] <= 'z')
-			check_is_letter(str, start);
-		else if (str[start] >= 'A' && str[start] <= 'Z')
+		if (!((str[start] >= '0' && str[start] <= '9'))
+			&& !((str[start] >= 'a' && str[start] <= 'z')
+				|| (str[start] >= 'A' && str[start] <= 'Z')))
 			check_is_letter(str, start);
 		start++;
 	}

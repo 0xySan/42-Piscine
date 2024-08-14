@@ -6,11 +6,9 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 15:10:41 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/14 17:08:32 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -31,6 +29,8 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 	len = ft_strlen(dest);
 	v = 0;
+	if(n == 0)
+		return (dest);
 	while (v < n && src[v])
 	{
 		dest[v] = src[v];
@@ -45,10 +45,15 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[v] = '\0';
 	return (dest);
 }
-/*
-int main(){
-	char test[] = "Hello";
-	char test2[] = "World!";
-	ft_strncpy(test,test2,1000);
-	printf("%s", test);
-}*/
+
+// #include <string.h>
+// #include <stdio.h>
+// int	main()
+// {
+// 	const char test[] = "Hello";
+// 	char test2[] = "World1";
+// 	printf("%s\n", ft_strncpy(test2, "Hello", 0));
+// 	char test3[] = "World1";
+// 	printf("%s\n", strncpy(test3, test, -1));
+// 	return 0;
+// }
