@@ -3,30 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 22:02:39 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/11 21:44:54 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/14 15:17:39 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
-	if(!str){
-		return str;
-	}
+	int	start;
 
-	int start;
-
+	if (!str)
+		return (str);
 	start = 0;
-
-	while(str && str[start]){
-		if(str[start]>='a' && str[start] <='z'){
-			str[start] = str[start]-32;
-		}
+	while (str && str[start])
+	{
+		if (str[start] >= 'a' && str[start] <= 'z')
+			str[start] = str[start] - 32;
 		start++;
 	}
-	return str;
+	return (str);
 }
 
 /*#include <stdio.h>

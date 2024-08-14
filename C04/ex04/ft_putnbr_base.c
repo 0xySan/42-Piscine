@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 00:02:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 03:19:15 by oxysan           ###   ########.fr       */
+/*   Updated: 2024/08/14 15:08:55 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,13 @@ int	ft_count_nb(int nb, int len)
 	return (value);
 }
 
-
 void	ft_putnbr_base(int nb, char *base)
 {
 	int	nb_count;
 	int	n_tempo;
 	int	nb_tempo;
 	int	blen;
-    int signe;
+	int	signe;
 
 	blen = ft_strlen(base);
 	if (blen <= 0)

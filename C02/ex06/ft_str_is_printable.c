@@ -6,20 +6,19 @@
 /*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 22:00:52 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 22:48:08 by oxysan           ###   ########.fr       */
+/*   Updated: 2024/08/14 22:49:00 by oxysan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_printable(char *str)
+int	ft_str_is_printable(char *str)
 {
-		if(!str){
-		return 1;
-	}
+	if (!str)
+		return (1);
 	str--;
 	while(++str && *str){
-		if(*str<32 || *str>126){
+		if(*str<33 || *str>126){
 			return 0;
 		}
 	}
-	return 1;
+	return (1);
 }

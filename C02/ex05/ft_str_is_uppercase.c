@@ -3,23 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 21:59:33 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/11 21:45:39 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/14 15:14:03 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_uppercase(char *str)
 {
-	if(!str){
-		return 1;
-	}
+	if (!str)
+		return (1);
 	str--;
-	while(++str && *str){
-		if(*str<'A' || *str>'Z'){
-			return 0;
-		}
+	while (++str && *str)
+	{
+		if (*str < 'A' || *str > 'Z')
+			return (0);
 	}
-	return 1;
+	return (1);
 }

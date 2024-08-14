@@ -6,7 +6,7 @@
 /*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 22:48:04 by oxysan           ###   ########.fr       */
+/*   Updated: 2024/08/14 22:49:21 by oxysan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,10 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[v] = '\0';
 	return (dest);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-// int	main()
-// {
-// 	const char test[] = "Hello";
-// 	char test2[] = "World1";
-// 	printf("%s\n", ft_strncpy(test2, "Hello", 0));
-// 	char test3[] = "World1";
-// 	printf("%s\n", strncpy(test3, test, -1));
-// 	return 0;
-// }
+/*
+int main(){
+	char test[] = "Hello";
+	char test2[] = "World!";
+	ft_strncpy(test,test2,1000);
+	printf("%s", test);
+}*/

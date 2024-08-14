@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxy <oxy@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 20:58:19 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/11 21:46:19 by oxy              ###   ########.fr       */
+/*   Updated: 2024/08/14 15:10:09 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,20 @@
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	if(!dest || !src){
-		return dest;
-	}
-	int v;
+	int	v;
 
+	if (!dest || !src)
+	{
+		return (dest);
+	}
 	v = 0;
-	while(src[v])
+	while (src[v])
 	{
 		dest[v] = src[v];
 		v++;
 	}
 	dest[v] = '\0';
-	return dest;
+	return (dest);
 }
 /*
 int main(int c, char **v){
