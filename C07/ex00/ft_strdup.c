@@ -6,7 +6,7 @@
 /*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 14:53:10 by oxysan            #+#    #+#             */
-/*   Updated: 2024/08/15 18:59:56 by oxysan           ###   ########.fr       */
+/*   Updated: 2024/08/18 15:50:01 by oxysan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ char    *ft_strdup(char *src)
     return dest;
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     printf("%s", ft_strdup("Hello World!"));
-}
+}*/

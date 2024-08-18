@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 22:49:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/18 15:55:56 by oxysan           ###   ########.fr       */
+/*   Created: 2024/08/18 15:53:14 by oxysan            #+#    #+#             */
+/*   Updated: 2024/08/18 17:13:24 by oxysan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,12 @@ int	ft_space(char *str)
 	return (start);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi_base(char *str, char *base)
 {
 	int	start;
 	int	signe;
 	int	value;
+    (void)base;
 
 	signe = 1;
 	start = ft_space(str);
@@ -59,9 +60,9 @@ int	ft_atoi(char *str)
 		}
 		start++;
 	}
-	while (str[start] >= '0' && str[start] <= '9')
+	while (//fonction(str[start], base) != -1)
 	{
-		value = value * 10 + str[start++] - '0';
+		value = value * len //+ fonction(str[start], base);
 	}
 	return (value * signe);
 }
@@ -72,3 +73,8 @@ int	main(int argc, char *argv[])
 	printf("%d", ft_atoi(argv[1]));
 	return 0;
 }*/
+
+// fonction qui donne index d'une lettre de base
+// 
+//
+//
