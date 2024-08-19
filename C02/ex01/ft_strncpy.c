@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 22:49:21 by oxysan           ###   ########.fr       */
+/*   Updated: 2024/08/19 16:37:53 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 	len = ft_strlen(dest);
 	v = 0;
-	if(n == 0)
+	if (n == 0)
 		return (dest);
 	while (v < n && src[v])
 	{
