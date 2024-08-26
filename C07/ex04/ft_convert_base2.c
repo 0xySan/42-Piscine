@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*   ft_convert_base2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 15:53:14 by oxysan            #+#    #+#             */
-/*   Updated: 2024/08/20 13:07:40 by etaquet          ###   ########.fr       */
+/*   Created: 2024/08/22 14:23:48 by etaquet           #+#    #+#             */
+/*   Updated: 2024/08/22 14:24:10 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 int	ft_strlen(char *str)
 {
 	int	val;
 	int	temp;
 
+	if (!str)
+		return (0);
 	val = -1;
 	while (str && str[++val])
 	{
@@ -40,7 +44,7 @@ int	ft_check_base(char *str, char *base, int index)
 		if (str[index] == base[start])
 			return (start);
 	}
-	return (start - 1);
+	return (-1);
 }
 
 int	ft_atoi_base(char *str, char *base)
@@ -59,22 +63,48 @@ int	ft_atoi_base(char *str, char *base)
 	while ((str[start] == '+' || str[start] == '-'))
 	{
 		if (str[start] == '-')
-		{
 			signe *= -1;
-		}
 		start++;
 	}
 	while (ft_check_base(str, base, start) != -1 && str[start])
-	{
-		value = value * ft_strlen(base) + ft_check_base(str, base, start);
-		start++;
-	}
+		value = value * ft_strlen(base) + ft_check_base(str, base, start++);
 	return (value * signe);
 }
 
-// #include <stdio.h>
-// int	main(int argc, char *argv[])
-// {
-// 	printf("%d", ft_atoi_base(argv[1], "poneyvif"));
-// 	return 0;
-// }
+int	ft_count_nb(int nb, int len)
+{
+	int	value;
+
+	value = 0;
+	while (nb >= len || nb <= -len)
+	{
+		nb /= len;
+		value++;
+	}
+	return (value);
+}
+
+char	*ft_calcnbr_base(int nb, int signe, char *base, int start)
+{
+	int		nb_count;
+	int		n_tempo;
+	int		nb_tempo;
+	char	*r_value;
+	int		len;
+
+	len = ft_strlen(base);
+	r_value = malloc(sizeof(char) * (len + 1));
+	if (signe < 0)
+		r_value[0] = '-';
+	nb_count = ft_count_nb(nb, len) + 1;
+	while (nb_count-- > 0)
+	{
+		start++;
+		n_tempo = nb_count;
+		nb_tempo = nb;
+		while (n_tempo--)
+			nb_tempo /= len;
+		r_value[start] = base[(nb_tempo % len) * signe];
+	}
+	return (r_value);
+}

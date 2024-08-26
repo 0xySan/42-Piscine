@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 22:45:08 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/14 03:18:49 by oxysan           ###   ########.fr       */
+/*   Updated: 2024/08/23 21:01:58 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,23 +44,21 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	len;
+	int	i;
 
-	if (!str || !to_find)
-	{
-		return (0);
-	}
 	len = ft_strlen(to_find);
 	if (len == 0)
 	{
 		return (str);
 	}
-	while (*str)
+	i = 0;
+	while (str[i])
 	{
-		if (ft_strncmp(str, to_find, len) == 0)
+		if (ft_strncmp(&str[i], to_find, len) == 0)
 		{
-			return (str);
+			return (&str[i]);
 		}
-		str++;
+		i++;
 	}
 	return (0);
 }

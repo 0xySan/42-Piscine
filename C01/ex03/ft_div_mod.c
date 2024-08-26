@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 21:38:45 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 09:36:40 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/23 20:57:23 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,3 +15,14 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	*div = a / b;
 	*mod = a % b;
 }
+
+// int main()
+// {
+// 	int a = 10;
+// 	int b = 3;
+// 	int div;
+// 	int mod;
+// 	ft_div_mod(a, b, &div, &mod);
+// 	printf("div = %d\nmod = %d", div, mod);
+// 	return (0);
+// }

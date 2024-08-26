@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oxysan <oxysan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 22:18:56 by oxysan            #+#    #+#             */
-/*   Updated: 2024/08/14 22:31:15 by oxysan           ###   ########.fr       */
+/*   Updated: 2024/08/20 13:05:56 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,11 @@ int	ft_strcmp(char *s1, char *s2)
 {
 	int	start;
 
-	if (!s1 || !s2)
-	{
-		return (0);
-	}
 	start = -1;
 	while (s1[++start])
 	{
 		if (s1[start] != s2[start])
-		{
 			return (s1[start] - s2[start]);
-		}
 	}
 	return (s1[start] - s2[start]);
 }
@@ -34,7 +28,7 @@ int	ft_strcmp(char *s1, char *s2)
 int	ft_minimum(char **tab, int start, int size)
 {
 	char	*minimum;
-	int	index;
+	int		index;
 
 	minimum = tab[start];
 	index = start;
@@ -52,8 +46,8 @@ int	ft_minimum(char **tab, int start, int size)
 void	ft_sort_char_tab(char **tab, int size)
 {
 	char	*temp;
-	int	temp_index;
-	int	start;
+	int		temp_index;
+	int		start;
 
 	start = 0;
 	while (start < size)
@@ -72,22 +66,20 @@ int	ft_strlen(char *str)
 
 	val = 0;
 	while (str[val])
-	{
 		val++;
-	}
 	return (val);
 }
 
-int main(int n, char **v)
+int	main(int n, char **v)
 {
-    int start;
+	int	start;
 
-    ft_sort_char_tab(v+1, n-1);
-    start = 0;
-    while(++start < n)
-    {
-        write(1,v[start],ft_strlen(v[start]));
-        write(1,"\n",1);
-    }
-    return 0;
+	ft_sort_char_tab(v + 1, n - 1);
+	start = 0;
+	while (++start < n)
+	{
+		write(1, v[start], ft_strlen(v[start]));
+		write(1, "\n", 1);
+	}
+	return (0);
 }

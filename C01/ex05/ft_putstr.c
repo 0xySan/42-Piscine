@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 21:45:58 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 09:37:02 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/23 20:57:08 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,9 @@ void	ft_putstr(char *str)
 		write(1, str++, 1);
 	}
 }
+
+// int main()
+// {
+// 	char *str = "Hello, World!";
+// 	ft_putstr(str);
+// }

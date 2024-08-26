@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 21:33:16 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 09:36:22 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/23 20:57:32 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,12 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = swappable;
 }
+
+// int main()
+// {
+// 	int a = 10;
+// 	int b = 3;
+// 	ft_swap(&a, &b);
+// 	printf("a = %d\nb = %d", a, b);
+// 	return (0);
+// }

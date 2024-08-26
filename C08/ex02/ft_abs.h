@@ -1,7 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/19 18:45:02 by marvin            #+#    #+#             */
+/*   Updated: 2024/08/22 21:09:01 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#ifndef FT_ABS_
-#define FT_ABS_
-
-#define ABS(Value) ((Value) < 0 ? -(Value) : (Value))
+#ifndef FT_ABS_H
+# define FT_ABS_H
+# define ABS(Value) if (Value < 0) Value = -(Value)
 
 #endif

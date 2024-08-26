@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 22:14:09 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/08 09:37:52 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/26 13:39:44 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,16 @@ void	ft_sort_int_tab(int *tab, int size)
 		start++;
 	}
 }
+
+// int main()
+// {
+// 	int tab[5] = {5, 4, 3, 2, 1};
+// 	int i = 0;
+// 	ft_sort_int_tab(tab, 5);
+// 	while (i < 5)
+// 	{
+// 		printf("%d\n", tab[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }

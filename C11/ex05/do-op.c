@@ -6,31 +6,31 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:44:56 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/24 14:44:58 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/26 13:46:45 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void write_digit(int nb)
+void	write_digit(int nb)
 {
-    char c;
+	char	c;
 
-    if (nb < 0)
-    {
-        write(1, "-", 1);
-        nb *= -1;
-    }
-    if (nb >= 10)
-    {
-        write_digit(nb / 10);
-        write_digit(nb % 10);
-    }
-    else
-    {
-        c = nb + '0';
-        write(1, &c, 1);
-    }
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb *= -1;
+	}
+	if (nb >= 10)
+	{
+		write_digit(nb / 10);
+		write_digit(nb % 10);
+	}
+	else
+	{
+		c = nb + '0';
+		write(1, &c, 1);
+	}
 }
 
 int	ft_atoi(char *str)
@@ -55,46 +55,48 @@ int	ft_atoi(char *str)
 	return (value * signe);
 }
 
-void div_a_b(int a, int b)
+void	div_a_b(int a, int b)
 {
-    if (b == 0)
-    {
-        write(1, "Stop : division by zero", 24);
-        return;
-    }
-    write_digit(a / b);
+	if (b == 0)
+	{
+		write(1, "Stop : division by zero", 24);
+		return ;
+	}
+	write_digit(a / b);
 }
 
-
-void mod_a_b(int a, int b)
+void	mod_a_b(int a, int b)
 {
-    if (b == 0)
-    {
-        write(1, "Stop : modulo by zero", 22);
-        return;
-    }
-    write_digit(a % b);
+	if (b == 0)
+	{
+		write(1, "Stop : modulo by zero", 22);
+		return ;
+	}
+	write_digit(a % b);
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-    if (argc != 4)
-    {
-        return 0;
-    }
-    int a = ft_atoi(argv[1]);
-    int b = ft_atoi(argv[3]);
-    if (argv[2][0] == '+')
-        write_digit(a + b);
-    else if (argv[2][0] == '-')
-        write_digit(a - b);
-    else if (argv[2][0] == '*')
-        write_digit(a * b);
-    else if (argv[2][0] == '/')
-        div_a_b(a, b);
-    else if (argv[2][0] == '%')
-        mod_a_b(a, b);
-    else
-        write(1, "0", 2);
-    write(1, "\n", 1);
+	int	a;
+	int	b;
+
+	if (argc != 4)
+	{
+		return (0);
+	}
+	a = ft_atoi(argv[1]);
+	b = ft_atoi(argv[3]);
+	if (argv[2][0] == '+')
+		write_digit(a + b);
+	else if (argv[2][0] == '-')
+		write_digit(a - b);
+	else if (argv[2][0] == '*')
+		write_digit(a * b);
+	else if (argv[2][0] == '/')
+		div_a_b(a, b);
+	else if (argv[2][0] == '%')
+		mod_a_b(a, b);
+	else
+		write(1, "0", 2);
+	write(1, "\n", 1);
 }

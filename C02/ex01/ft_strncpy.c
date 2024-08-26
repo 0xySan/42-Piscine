@@ -6,49 +6,31 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 04:28:20 by oxy               #+#    #+#             */
-/*   Updated: 2024/08/19 16:37:53 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/20 13:03:54 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	val;
-
-	val = 0;
-	while (str[val])
-	{
-		val++;
-	}
-	return (val);
-}
-
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int	v;
-	unsigned int	len;
+	unsigned int	start;
 
-	len = ft_strlen(dest);
-	v = 0;
-	if (n == 0)
-		return (dest);
-	while (v < n && src[v])
+	start = 0;
+	while (src && src[start] && start < n)
 	{
-		dest[v] = src[v];
-		v++;
+		dest[start] = src[start];
+		++start;
 	}
-	while (v < n - 1)
+	while (start < n)
 	{
-		dest[v] = '\0';
-		v++;
+		dest[start] = '\0';
+		start++;
 	}
-	if (n >= len)
-		dest[v] = '\0';
 	return (dest);
 }
-/*
-int main(){
-	char test[] = "Hello";
-	char test2[] = "World!";
-	ft_strncpy(test,test2,1000);
-	printf("%s", test);
-}*/
+// #include <stdio.h>
+// int main(){
+// 	char test[] = "Hello";
+// 	char test2[] = "World!";
+// 	ft_strncpy(test,test2,10);
+// 	printf("%s", test);
+// }

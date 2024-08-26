@@ -6,30 +6,31 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:44:43 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/24 14:44:43 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/26 13:45:04 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_advanced_sort_string_tab(char **tab, int(*cmp)(char *, char *)) {
-    char *temp;
-    int temp_index;
-    int start;
+void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
+{
+	char	*temp;
+	int		temp_index;
+	int		start;
 
-    start = 0;
-    while (tab[start])
-    {
-        temp_index = start;
-        while (tab[++temp_index])
-        {
-            if (cmp(tab[start], tab[temp_index]) > 0)
-            {
-                temp = tab[start];
-                tab[start] = tab[temp_index];
-                tab[temp_index] = temp;
-            }
-        }
-        start++;
-    }
+	start = 0;
+	while (tab[start])
+	{
+		temp_index = start;
+		while (tab[++temp_index])
+		{
+			if (cmp(tab[start], tab[temp_index]) > 0)
+			{
+				temp = tab[start];
+				tab[start] = tab[temp_index];
+				tab[temp_index] = temp;
+			}
+		}
+		start++;
+	}
 }
 
 // int	ft_strcmp(char *s1, char *s2)

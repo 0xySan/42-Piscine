@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 15:03:12 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/13 14:14:18 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/20 14:13:29 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ void	ft_putnbr(int nb)
 
 	if (nb == -2147483648)
 	{
-		write(1, "-2147483648", 12);
+		write(1, "-", 1);
+		write(1, "2", 1);
+		write(1, "147483648", 9);
 		return ;
 	}
 	if (nb < 0)
@@ -56,11 +58,9 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb_tempo % 10 + '0');
 	}
 }
-/*
-int main(int argc, const char *argv[])
-{
-	int i;
 
-	ft_putnbr(-2147483648);
-	return 0;
-}*/
+// int main()
+// {
+// 	ft_putnbr(2147483647);
+// 	return 0;
+// }

@@ -6,20 +6,20 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 21:20:25 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/24 14:47:24 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/26 13:43:51 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_foreach(int *tab, int length, void(*f)(int))
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i < length)
-    {
-        f(tab[i]);
-        i++;
-    }
+	i = 0;
+	while (i < length)
+	{
+		f(tab[i]);
+		i++;
+	}
 }
 
 // void ft_putnbr(int n)
