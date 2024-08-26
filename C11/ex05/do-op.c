@@ -6,31 +6,35 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:44:56 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/26 13:46:45 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/26 16:17:32 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	write_digit(int nb)
-{
-	char	c;
+void plus_a_b(int a, int b);
+void minus_a_b(int a, int b);
+void times_a_b(int a, int b);
 
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		write_digit(nb / 10);
-		write_digit(nb % 10);
-	}
-	else
-	{
-		c = nb + '0';
-		write(1, &c, 1);
-	}
+void putnbr(int nb)
+{
+    char c;
+
+    if (nb < 0)
+    {
+        write(1, "-", 1);
+        nb *= -1;
+    }
+    if (nb >= 10)
+    {
+        putnbr(nb / 10);
+        putnbr(nb % 10);
+    }
+    else
+    {
+        c = nb + '0';
+        write(1, &c, 1);
+    }
 }
 
 int	ft_atoi(char *str)
@@ -55,48 +59,44 @@ int	ft_atoi(char *str)
 	return (value * signe);
 }
 
-void	div_a_b(int a, int b)
+void div_a_b(int a, int b)
 {
-	if (b == 0)
-	{
-		write(1, "Stop : division by zero", 24);
-		return ;
-	}
-	write_digit(a / b);
+    if (b == 0)
+    {
+        write(1, "Stop : division by zero", 24);
+        return;
+    }
+    putnbr(a / b);
 }
 
-void	mod_a_b(int a, int b)
+
+void mod_a_b(int a, int b)
 {
-	if (b == 0)
-	{
-		write(1, "Stop : modulo by zero", 22);
-		return ;
-	}
-	write_digit(a % b);
+    if (b == 0)
+    {
+        write(1, "Stop : modulo by zero", 22);
+        return;
+    }
+    putnbr(a % b);
 }
 
-int	main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int	a;
-	int	b;
-
-	if (argc != 4)
-	{
-		return (0);
-	}
-	a = ft_atoi(argv[1]);
-	b = ft_atoi(argv[3]);
-	if (argv[2][0] == '+')
-		write_digit(a + b);
-	else if (argv[2][0] == '-')
-		write_digit(a - b);
-	else if (argv[2][0] == '*')
-		write_digit(a * b);
-	else if (argv[2][0] == '/')
-		div_a_b(a, b);
-	else if (argv[2][0] == '%')
-		mod_a_b(a, b);
-	else
-		write(1, "0", 2);
-	write(1, "\n", 1);
+    void (*f[127])(int,int);
+    if (argc != 4)
+    {
+        return 0;
+    }
+    f['/'] = &div_a_b;
+    f['%'] = &mod_a_b;
+    f['+'] = &plus_a_b;
+    f['-'] = &minus_a_b;
+    f['*'] = &times_a_b;
+    int a = ft_atoi(argv[1]);
+    int b = ft_atoi(argv[3]);
+    if(argv[2][0] == '/' || argv[2][0] == '%' || argv[2][0] == '+' || argv[2][0] == '-' || argv[2][0] == '*')
+        f[(int)argv[2][0]](a, b);
+    else
+        write(1,"0",1);
+    write(1, "\n", 1);
 }

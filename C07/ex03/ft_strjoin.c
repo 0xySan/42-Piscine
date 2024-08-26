@@ -6,11 +6,12 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 18:14:40 by oxysan            #+#    #+#             */
-/*   Updated: 2024/08/26 12:30:06 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/26 15:31:50 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -18,7 +19,9 @@ int	ft_strlen(char *str)
 
 	val = 0;
 	while (str[val])
+	{
 		val++;
+	}
 	return (val);
 }
 
@@ -40,15 +43,19 @@ char	*ft_strcat(char *dest, char *src)
 	int	start;
 
 	if (!src)
+	{
 		return (dest);
+	}
 	start = 0;
 	while (dest && dest[start])
+	{
 		start++;
+	}
 	ft_strcpy(&dest[start], src);
 	return (dest);
 }
 
-int	calc_len(int size, char **strs, char *sep)
+int calc_len(int size, char **strs, char *sep)
 {
 	int	len;
 	int	start;
@@ -60,6 +67,8 @@ int	calc_len(int size, char **strs, char *sep)
 	while (start < size)
 		len += ft_strlen(strs[start++]);
 	len += (ls * (size - 1));
+	if (len < 1)
+		len = 0;
 	return (len);
 }
 
@@ -68,9 +77,10 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	char	*result;
 	int		start;
 
+	start = -1;
 	result = malloc(sizeof(char) * (calc_len(size, strs, sep) + 1));
 	result[0] = '\0';
-	if (size == 0)
+	if (size <= 0)
 		return (result);
 	start = -1;
 	while (++start < size)
@@ -82,8 +92,9 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	return (result);
 }
 
-// #include <stdio.h>
-// int main(int n, char **v)
-// {
-// 	printf("%s", ft_strjoin(n,v, ", , "));
-// }
+#include <stdio.h>
+int main()
+{
+	char *strs[] = {"Hello", "World", "!"};
+	printf("%s", ft_strjoin(3,strs, ", "));
+}

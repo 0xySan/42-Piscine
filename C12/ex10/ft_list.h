@@ -6,7 +6,7 @@
 /*   By: etaquet <etaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:44:20 by etaquet           #+#    #+#             */
-/*   Updated: 2024/08/26 11:36:33 by etaquet          ###   ########.fr       */
+/*   Updated: 2024/08/24 14:44:20 by etaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 typedef struct s_list
 {
-	void			*data;
-	struct s_list	*next;
+    void	*data;
+    struct s_list	*next;
 }	t_list;
 
 #endif
