@@ -5,27 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 01:09:07 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/08/30 00:12:40 by marvin           ###   ########.fr       */
+/*   Created: 2024/08/30 00:54:27 by marvin            #+#    #+#             */
+/*   Updated: 2024/08/30 00:54:27 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/lib.h"
+#include "ft_point.h"
 
-int	main(int argc, char **argv)
+void set_point(t_point *point)
 {
-	t_map	map_data;
-	int		i;
+    point->x = 42;
+    point->y = 21;
+}
 
-	if (argc < 2)
-		ft_init_solving(NULL, &map_data);
-	else
-	{
-		i = 1;
-		while (argv[i])
-		{
-			ft_init_solving(argv[i++], &map_data);
-		}
-	}
-	return (0);
+int main(void)
+{
+    t_point point;
+    set_point(&point);
+    return (0);
 }

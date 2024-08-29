@@ -5,27 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 01:09:07 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/08/30 00:12:40 by marvin           ###   ########.fr       */
+/*   Created: 2024/08/30 00:55:05 by marvin            #+#    #+#             */
+/*   Updated: 2024/08/30 00:55:05 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/lib.h"
-
-int	main(int argc, char **argv)
+#include "ft_boolean.h"
+void ft_putstr(char *str)
 {
-	t_map	map_data;
-	int		i;
+    while (*str)
+        write(1, str++, 1);
+}
 
-	if (argc < 2)
-		ft_init_solving(NULL, &map_data);
-	else
-	{
-		i = 1;
-		while (argv[i])
-		{
-			ft_init_solving(argv[i++], &map_data);
-		}
-	}
-	return (0);
+t_bool ft_is_even(int nbr)
+{
+    return ((EVEN(nbr)) ? TRUE : FALSE);
+}
+
+int main(int argc, char **argv)
+{
+    (void)argv;
+    if (ft_is_even(argc - 1) == TRUE)
+        ft_putstr(EVEN_MSG);
+    else
+        ft_putstr(ODD_MSG);
+    return (SUCCESS);
 }

@@ -1,0 +1,3 @@
+# EXERCISE
+
+The project was to write a program "ft_print_params" is the same as ex01 but reversed.
